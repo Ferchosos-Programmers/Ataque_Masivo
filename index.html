@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/netflix.ico" type="image/x-icon"> <!-- Aquí se especifica el favicon -->
+    <title>Netflix</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+ 
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/dae1f45f-c2c5-4a62-8d58-6e1b0c6b2d8e/7c1bbb0e-d3d6-4977-9f9b-e1f10d9a0eb8/EC-en-20240827-TRIFECTA-perspective_WEB_3c194d93-e3f5-4c15-b5c9-c34a10e9b566_large.jpg'); /* URL de la imagen */
+            background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+ 
+        .top-left-image {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 150px; /* Ajusta el tamaño según sea necesario */
+        }
+ 
+        .login-container {
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.75); /* Fondo semitransparente */
+            border-radius: 5px;
+        }
+ 
+        .login-box h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+ 
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+ 
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            background: #333;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+        }
+ 
+        .input-group label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #8c8c8c;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            pointer-events: none;
+        }
+ 
+        .input-group input:focus + label,
+        .input-group input:not(:placeholder-shown) + label {
+            top: -15px;
+            left: 10px;
+            font-size: 12px;
+            color: #737373;
+        }
+ 
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #e50914;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+ 
+        button:hover {
+            background-color: #f6121d;
+        }
+ 
+        .help-links {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #8c8c8c;
+            margin-top: 10px;
+        }
+ 
+        .help-links a {
+            color: #8c8c8c;
+            text-decoration: none;
+        }
+ 
+        .signup {
+            margin-top: 30px;
+            font-size: 16px;
+        }
+ 
+        .signup a {
+            color: white;
+            text-decoration: none;
+        }
+ 
+        .signup a:hover {
+            text-decoration: underline;
+        }
+ 
+        .terms {
+            font-size: 12px;
+            color: #8c8c8c;
+            margin-top: 15px;
+        }
+ 
+        .terms a {
+            color: #8c8c8c;
+            text-decoration: none;
+        }
+ 
+    </style>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix Logo" class="top-left-image"> <!-- Imagen en la esquina superior izquierda -->
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Inicia sesión</h1>
+            <form>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Correo electrónico o número de teléfono</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Contraseña</label>
+                </div>
+                <button type="#">Iniciar sesión</button>
+                <div class="help-links">
+                    <label>
+                        <input type="checkbox" name="remember"> Recuérdame
+                    </label>
+                    <a href="#">¿Necesitas ayuda?</a>
+                </div>
+            </form>
+            <div class="signup">
+                <p>¿Primera vez en Netflix? <a href="#">Suscríbete ahora</a>.</p>
+            </div>
+            <p class="terms">
+                Esta página está protegida por Google reCAPTCHA para garantizar que no eres un robot. <a href="#">Más info</a>.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
